@@ -7,11 +7,15 @@ __pycache__/
 db.sqlite3
 *.log
 
-# Virtual Environment
-venv/
-myenv/
-.env
+# Ignore the virtual environment directory
+cged_env/
+
+# Ignore site-packages folder within virtual environment
+cged_env/lib/python3.11/site-packages/
 
 # Miscellaneous
 *.swp
 .DS_Store
+
+# Ignore test files or other temporary files
+test.py
