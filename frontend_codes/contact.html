@@ -43,6 +43,7 @@
             </p>     
 
             <form action="https://formsubmit.co/raphael.dahomay@kedgebs.com" method="POST"> <!-- Changez avec la bonne adresse à la fin-->
+                {% csrf_token %}
                 <label>Nom:</label><br>
                 <input type="text" name="name" placeholder="votre nom"><br><br>
 
