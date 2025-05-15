@@ -1,0 +1,224 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Charte</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <div class="first-div"> 
+                <img class="logo" src="{% static './img/cged_logo_no_background.png' %}" alt="site_logo">
+                    <div class="line"></div>
+                <h1>Collectif <br> Guadeloupe Éthique et Démocratie</h1>
+                <a href="{% url 'login' %}">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>Se connecter
+                </a>
+            </div>
+            <div class="second-div">
+                <img class="flag" src="{% static './img/manif.jpg' %}" alt="manif">
+            </div>
+        </header>
+
+        <nav>
+            <a href="{% url 'home' %}">Accueil</a>
+            <a href="{% url 'communique' %}">Communiqués</a>
+            <a href="{% url 'analyse' %}"> Analyses Sociétales</a>
+            <a href="{% url 'about' %}"> À propos</a>
+            <a href="{% url 'contact' %}"> Contactez-nous</a>
+
+        </nav>
+
+        <div class="belly-charte">
+
+            <h1> La Charte du Collectif GÉD </h1>
+
+            <h2> Genèse </h2>
+                <p> 
+                    Depuis plusieurs mois, et en particulier depuis le mois de novembre 2021, la Guadeloupe vit sans aucun doute l’une des plus graves crises de ces dernières décennies.
+                    Le 18 décembre 2021, une trentaine de membres de la société civile guadeloupéenne avaient lancé une pétition en ligne pour dénoncer les violences graves et répétées 
+                    à l’encontre des biens et des personnels du CHU de Pointe-à-Pitre. Cette pétition a recueilli plus de 7 500 signatures ; 
+                    jamais une pétition locale n’avait rassemblé autant de signataires.
+                    Le 8 janvier 2022, les initiateurs de la pétition contre les violences au CHU avaient appelé à un rassemblement pacifique au Mémorial ACTe. 
+                    Ce rassemblement a réuni plus de 600 personnes et a constitué la première forte protestation citoyenne, dénonçant le climat de terreur imposé depuis plusieurs mois 
+                    par des organisations syndicales à l’ensemble de la population.
+                    La question de la violence, de la loi, et de la santé étant au cœur du « contrat social », les initiateurs de ce rassemblement au Mémorial ACTe se sont ensuite 
+                    réunis pour décider de créer un collectif citoyen – le collectif « Guadeloupe, éthique et démocratie » –, dans le but d’intervenir dans l’espace public 
+                    sur toute question fondamentale portant sur le « vivre-ensemble » au sein de la société guadeloupéenne.
+                    En particulier, le collectif souhaite créer en son sein un laboratoire d’idées (un « think tank »), afin de contribuer au renouvellement des idées sur les 
+                    problématiques et les enjeux contemporains de société.
+                </p>
+        
+            <h2> Article 1 : Finalités du collectif citoyen </h2>
+                <p>
+                    Le collectif « Guadeloupe, éthique et démocratie » est un regroupement de citoyennes et de citoyens ayant des intérêts matériels, 
+                    affectifs et moraux en Guadeloupe, et qui souhaitent agir dans un cadre collectif afin de contribuer à un avenir commun pacifié, 
+                    et où les différences d’origines, de genre et d’opinions apparaissent comme une richesse plutôt que comme le terreau des divisions 
+                    mortifères et dangereuses.
+                    Le collectif est strictement apolitique. Il se veut fondamentalement et profondément respectueux en son sein, 
+                    comme dans l’espace public, des différences d’opinons religieuses, philosophiques et politiques, dès lors que l’expression de 
+                    ces opinions n’est pas contraire aux droits humains fondamentaux.
+                    Le collectif « Guadeloupe, éthique et démocratie » se donne avant tout pour finalités : 
+                </p>
+        
+            <h3> 1. De contribuer à la refondation de l’espace public en Guadeloupe. </h3>
+                <p> 
+                    L’espace public est ici entendu comme tous les lieux physiques et dématérialisés (médias et réseaux sociaux) qui ne relèvent pas 
+                    de la sphère familiale ou privée, et où s’élaborent les débats entre simples citoyennes et citoyens, même de façon informelle. 
+                    Aussi, pour que ces débats puissent permettre l’épanouissement des consciences individuelles et collectives, deux conditions 
+                    nous semblent indispensables. D’une part, il nous semble absolument nécessaire que ces débats ne soient pas anonymes, 
+                    et qu’ils soient aussi respectueux de la dignité des personnes, et de leurs libertés et droits fondamentaux. 
+                    D’autre part, un autre principe nous semble indispensable : qu’il y ait un minimum de rationalité lors de ces débats, 
+                    ce qui suppose une argumentation construite dans les propos. Afin de favoriser aussi des discussions réellement démocratiques, 
+                    le respect du contradictoire est utile et constructif.
+                    Ces préalables sont indispensables à l’avènement d’un véritable espace public guadeloupéen, consubstantiel de la vitalité démocratique 
+                    d’un pays, et qui font souvent défaut en Guadeloupe.
+                </p>
+            <h3> 2. De prendre toutes les initiatives citoyennes et qu’il jugera opportunes ou nécessaires afin de promouvoir la paix civile en Guadeloupe </h3>
+                <p>
+                    et ce, dans le respect absolu du droit de grève constitutionnellement garanti. En effet, nous ne sommes évidemment 
+                    pas opposés à l’action syndicale, bien au contraire. Nous pensons que l’action syndicale est absolument nécessaire 
+                    pour l’amélioration des conditions sociales des salariés, et de la société dans son ensemble. 
+                    Cependant, toute action syndicale implique une éthique syndicale qui semble parfois faire défaut. 
+                    En particulier, certaines méthodes syndicales par leur excès, peuvent même s’apparenter à des actions non démocratiques, 
+                    fort inquiétantes et non tolérantes, pouvant mettre à mal notre vivre-ensemble.
+                    De même, si la démocratie se caractérise de plus en plus par un rôle actif et engagé d’organisations de la société civile, 
+                    cette émergence utile ne doit pas s’accompagner de dévoiements des principes fondamentaux du droit public, de violences verbales, 
+                    et de diffusions de fausses affirmations. Notre collectif milite pour le maintien de la rationalité et d’un discours 
+                    sur la connaissance scientifique épistémologiquement cohérent au sein du débat public local.
+                    Nous souhaitons travailler avec d’autres à reconstruire le dialogue social, la médiation sociale, et ainsi éviter des passages 
+                    à l’acte violents qui porteraient atteinte aux biens – en particulier les biens publics – ou aux personnes.
+                </p>
+            <h3> 3.De promouvoir l’éthique, la solidarité et l’humanisme dans le débat public et la vie sociale et politique en Guadeloupe. </h3>
+                <p> 
+                    En particulier, le collectif souhaite défendre ou promouvoir au travers de ses interventions et actions publiques, 
+                    certains principes et valeurs jugés essentiels, parmi lesquels :
+                    - La défense des libertés et droits fondamentaux, y compris le droit à la différenciation et à l’autonomie, qui ne peuvent 
+                    être garantis que dans le cadre de l’État de droit ;
+                    - L’attachement au concept de la Relation telle que définie par l’écrivain Edouard Glissant (« la somme finie de toutes 
+                    les différences du monde ») ;
+                    - La lutte contre le racisme, la xénophobie, le négationnisme, ainsi que toutes les formes d’exclusions et de domination ;
+                    - L’attachement au droit des peuples à disposer d'eux-mêmes ;
+                    - La défense du pluralisme des idées et des opinions, consubstantiel à la démocratie, dès lors qu’elles sont respectueuses 
+                    de l’État de droit et de la laïcité ;
+                    - La défense de l’incommensurable diversité du vivant et de l’environnement.
+                    <strong> 
+                        Nous faisons nôtre cette idée sublime d’Edouard Glissant :
+                        « Agis dans ton lieu, pense avec le monde. C'est cela la mondialité. Une politique du monde qui s'oppose aux 
+                        aspects négatifs de la mondialisation. »
+                    </strong>
+                </p>
+            <h3> 4. De créer en son sein un laboratoire d’idées (Think tank) </h3>
+                <p> 
+                    afin de contribuer au renouvellement des idées en Guadeloupe sur les problématiques et les enjeux contemporains de société, 
+                    de la vie démocratique, ainsi que dans le domaine des politiques publiques.
+                    En outre, le collectif « Guadeloupe, éthique et démocratie » se réserve le droit d’intervenir à tout moment 
+                    dans l’espace public, sous quelque forme que ce soit, dès lors qu’il le jugera utile, dans l’intérêt général de la Guadeloupe.
+                </p>
+        
+            <h2> Article 2 : Organisation et fonctionnement interne du collectif </h2>
+                <p>
+                    <strong> démocratique du collectif :</strong> 
+                
+                    Le collectif « Guadeloupe, éthique et démocratie » n’a pas pour l’instant de statut associatif (loi 1901), 
+                    mais il pourra à l’avenir évoluer vers un statut associatif si le besoin s’en fait sentir, 
+                    notamment s’il apparaît nécessaire d’ester en justice sur des sujets sociétaux jugés fondamentaux.
+                    Le collectif a un fonctionnement démocratique, fondé sur la liberté d’opinion de l’ensemble de ses membres. 
+                    Les écrits (pétitions, appels, communiqués, …) de même que les actions publiques du collectif sont décidés par consensus 
+                    ou par compromis, à l’issue d’échanges et de débats en son sein.
+
+                    <strong>Le « Bureau exécutif » :</strong>
+                    
+                    Le collectif « Guadeloupe, éthique et démocratie » s’appuie dans son fonctionnement sur un « bureau exécutif » 
+                    constitué des membres cofondateurs du collectif. Outre les membres cofondateurs, il pourra être décidé à tout moment, 
+                    par consensus ou compromis, d’intégrer dans le bureau exécutif de nouveaux membres partageant les principes et les objectifs 
+                    de la présente charte, et souhaitant avoir un rôle actif au sein du collectif.  
+
+                    <strong> Le bureau exécutif est automatiquement saisi ou s’autosaisit :</strong>
+
+                    - de tout projet préalable d’écrits qui seraient signés au nom du collectif, ou encore de projets d’actions et 
+                    d’interventions publiques au nom du collectif ;
+                    - de toute nouvelle demande d’adhésion au sein du collectif, afin de vérifier, dans le strict respect de la personne humaine 
+                    et de ses libertés et droits fondamentaux, que cette adhésion ne serait pas contraire aux principes fondateurs, 
+                    ni à l’éthique du collectif ;
+                    - de tout litige qui interviendrait entre membres du collectif, ou de toute difficulté liée à l’organisation et au 
+                    fonctionnement du collectif.
+
+                    <strong> La liberté d’expression des membres du collectif : </strong>
+
+                    La liberté d’expression au sein du collectif est totale, dès lors qu’elle demeure profondément respectueuse de la personne humaine.
+                    Néanmoins, toute intervention dans la presse ou  les médias de l’un des membres du collectif « Guadeloupe, éthique et démocratie », 
+                    et qui serait réalisée au nom du collectif ou mentionnant l’appartenance au collectif, doit préalablement faire l’objet 
+                    d’un consensus ou d’un compromis au sein du bureau exécutif. Nonobstant cette précision, la liberté d’expression individuelle 
+                    de tous les membres du collectif est totale dans l’espace public et sur les médias, dès lors qu’elle s’effectue en son nom propre 
+                    et n’engage en aucun cas le collectif.
+                    L’adhésion au collectif « Guadeloupe, éthique et démocratie » :
+                    N’importe quelle citoyenne ou citoyen ayant des intérêts matériels, affectifs et moraux en Guadeloupe, qu’elle ou 
+                    il réside ou pas dans l’archipel, peut demander à adhérer au collectif, dès lors qu’elle ou il partage les principes 
+                    éthiques ainsi que l’organisation du collectif, explicités dans la présente charte.
+                    Les demandes d’adhésion sont étudiées par le bureau exécutif, qui vérifie simplement que cette adhésion ne contrevient pas 
+                    aux principes fondateurs, ni à l’éthique du collectif.
+                    Toute décision de refus d’une adhésion se fait par consensus au sein du bureau exécutif. Dans ce cas, le demandeur en est informé.
+                    Le bureau exécutif peut en outre décider par consensus de retirer l’adhésion à un membre du collectif, quel qu’il soit, 
+                    dès lors que de par ses actions ou ses prises de positions publiques, celui-ci porterait gravement atteinte et de façon 
+                    rédhibitoire à l’éthique du collectif.
+                </p>
+        
+            <h2> Article 3 : visibilité et actions du collectif </h2>
+                <p>
+                    <strong> Visibilité du collectif : </strong>
+
+                    Le collectif « Guadeloupe, éthique et démocratie » dispose d’un logo spécifique qu’il utilise sur tous ses supports de communication. 
+                    Nul ne peut utiliser ce logo à d’autres fins que celles visant à la communication du collectif.
+                    Tout membre du collectif, ou toute personne extérieure qui souhaiterait utiliser ce logo sur des supports de communication 
+                    dans l’intérêt supposé du collectif, doit préalablement en informer le bureau.
+                    Le collectif dispose d’une adresse mail générique qu’il utilise pour ses communications internes ou externes. 
+                    Cette adresse est la suivante : 
+                    
+                    <a href="mailto:collectifGED@gmail.com">collectifGED@gmail.com</a>
+                    
+                    Les membres désignés  ont la responsabilité de la gestion de cette adresse.
+                    Le collectif dispose d’une page Facebook ainsi que d’un groupe Whatsapp, constitué de l’ensemble des membres 
+                    du collectif (l’appartenance au groupe Whatsapp se fait bien entendu sur la base de l’accord préalable des participants). 
+                    Les administratrices et administrateurs de ces réseaux sociaux sont choisis parmi les membres du collectif, par consensus.
+                    Le collectif a en outre pour ambition de créer un site Internet sur lequel sera indiquée l’actualité des actions et 
+                    interventions publiques du collectif. Ce site Internet pourra à terme abriter des analyses sociétales sur la Guadeloupe 
+                    dans le but de nourrir la réflexion et le débat au sein de la société civile.
+                    Le cas échéant, un forum interactif, mais règlementé, pourra être constitué sur ce site Internet.
+
+                    <strong> Actions du collectif : </strong>
+
+                    Le collectif peut décider de toute action publique qu’il juge nécessaire, dès lors que cela fait l’objet d’un compromis, 
+                    à l’issue d’un débat entre ses membres.
+                    - Parmi les actions possibles, non exhaustives :
+                    - Communiqués, pétitions, lettre ouvertes ou appels citoyens ;
+                    - Ateliers de réflexion et de construction du commun ;
+                    - Rassemblements et marches pacifiques, de même que toute forme d’action citoyenne permettant de fédérer un grand nombre de citoyennes 
+                    et citoyens autour de causes communes ;
+                    - Séminaires ou colloques ;
+                    - Toute autre forme d’action innovante.
+                </p>
+        
+            <h4> 
+                <br>
+                Les membres cofondateurs du collectif du 8 janvier 2022, « Guadeloupe, éthique et démocratie » :
+                Tony ALBINA, Jenner BEDMINSTER, Marcel BRIDE, Elyzabeth CHOMEREAU-LAMOTTE, David DAHOMAY, Jacky DAHOMAY, Sonia DERIAU-REINE, 
+                Michel EYNAUD, Jan-Marc FERLY, Béatrice IBENE, Bruno JOFA, Olivier LABOISSIERE, Nicole LORI-DELFOLIE, Viviane MELYON-DEFRANCE, 
+                Rosan MONZA, Jacques PAUL, Pierre REINETTE, Christian SAAD, Carole VENUTOLO, Georges VILA.
+            </h4>
+        </div>
+
+        <footer>
+            <div class="legal-thing">
+                <p>© Collectif Guadeloupe Éthique et Démocratie - 2025</p>
+                <a href="/privacy.html">Politique de confidentialité</a>
+            </div>
+        </footer>
+    </body>
+</html>

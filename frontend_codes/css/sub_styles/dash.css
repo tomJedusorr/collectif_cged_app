@@ -1,0 +1,115 @@
+.tete {
+    display: flex;
+}
+
+.first-dash {
+    margin: 20px;
+}
+
+.first-dash h3 {
+    margin-top: 10px;
+}
+
+.second-dash {
+    margin: 20px;
+}
+
+.second-dash h2 {
+    padding-top: 20px;
+}
+
+.second-dash ul {
+    margin: 20px;
+    line-height: 40px;
+    font-size: larger;
+}
+
+.second-dash a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+}
+
+.second-dash a:hover {
+    background-color: rgb(229, 229, 229);
+}
+
+.third-dash {
+    margin: 20px;
+}
+
+.third-dash h2 {
+    padding-top: 20px;
+}
+
+.third-dash ul {
+    margin: 20px;
+    line-height: 40px;
+    font-size: larger;
+}
+
+.third-dash a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+}
+
+.third-dash a:hover {
+    background-color: rgb(229, 229, 229);
+}
+
+.action {
+    display: flex;
+    margin: 20px;
+    border: 1px solid;
+}
+
+.action a {
+    text-decoration: none;
+    color: rgb(11, 25, 115);
+}
+
+.pub-com {
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pub-anal {
+    width: 50%;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pub-com:hover {
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+.pub-anal:hover {
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+.tete form {
+    margin-left: auto;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.tete button {
+    padding: 10px;
+}
+
+.tete form:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+.tete button:hover {
+    cursor: pointer;
+}
+

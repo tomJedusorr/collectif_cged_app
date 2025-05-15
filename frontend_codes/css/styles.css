@@ -1,0 +1,19 @@
+@import url("sub_styles/articles.css");
+@import url("sub_styles/footer.css");
+@import url("sub_styles/header.css");
+@import url("sub_styles/main.css");
+@import url("sub_styles/nav.css");
+@import url("sub_styles/belly.css");
+@import url("sub_styles/dash.css");
+@import url("sub_styles/com_detail.css");
+@import url("sub_styles/anal_detail.css");
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+  }

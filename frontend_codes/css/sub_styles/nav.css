@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    background-color: #f8f9fa;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    gap: 30px;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+
+    <body>
+        <div class="first-dash">
+            <div class="tete">
+                <h1>Bienvenue, chère membre CGÉD</h1>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Se déconnecter</button>
+                </form>
+            </div>
+
+            <h3>Que souhaitez-vous faire?</h3>
+
+            <div class="action">
+                <div class="pub-com">
+                    <a href="{% url 'create_article' %}">📄 Publier un communiqué</a>
+                </div>
+                <div class="pub-anal">
+                    <a href="{% url 'create_paper' %}">📘 Publier une analyse sociétale</a>     
+                </div>
+            </div>
+        </div>
+
+        <div class="second-dash">
+            <h2>Les communiqués publiés</h2>
+            <ul>
+                {% for article in articles %}
+                <li>
+                    {{ article.title }}
+                    <a href="{% url 'edit_article' article.id %}">Modifier</a>
+                    <a href="{% url 'delete_article' article.id %}">Supprimer</a>
+                </li>
+                {% empty %}
+                <li>Pas de communiqués disponibles.</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="third-dash">
+            <h2>Les analyses sociétales publiées</h2>
+            <ul>
+                {% for paper in papers %}
+                <li>
+                    {{ paper.title }}
+                    <a href="{% url 'edit_paper' paper.id %}">Modifier</a>
+                    <a href="{% url 'delete_paper' paper.id %}">Supprimer</a>
+                </li>
+                {% empty %}
+                <li>Pas d'analyses disponibles.</li>
+                {% endfor %}
+            </ul>   
+        </div>   
+    </body>
+
+</html>

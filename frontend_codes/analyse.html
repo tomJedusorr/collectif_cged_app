@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Allow screen size adaptation between devices -->
+  </head>
+
+  <body>
+    <header>
+      <div class="first-div"> 
+        <img class="logo" src="{% static './img/cged_logo_no_background.png' %}" alt="site_logo">
+          <div class="line"></div>
+        <h1>Collectif <br> Guadeloupe Éthique et Démocratie</h1>
+        <a href="{% url 'login' %}">
+          <i class="fa-solid fa-user" style="color: #000000;"></i>Se connecter
+        </a>
+      </div>
+      <div class="second-div">
+        <img class="flag" src="{% static './img/manif.jpg' %}" alt="manif">
+      </div>
+    </header>
+
+    <nav>
+      <a href="{% url 'home' %}">Accueil</a>
+      <a href="{% url 'communique' %}">Communiqués</a>
+      <a href="{% url 'about' %}"> À propos</a>
+      <a href="{% url 'charte' %}">Charte</a>
+      <a href="{% url 'contact' %}"> Contactez-nous</a>
+    </nav>
+
+    <div class="belly-anal">
+      <h2>Retrouvez ici toutes nos analyses sociétales</h2>
+
+      <form method="get">
+        <label for="sort">Sort by:</label>
+        <select name="sort" id="sort" onchange="this.form.submit()">
+          <option value="newest" {% if request.GET.sort == 'newest' %}selected{% endif %}>Plus Récent</option>
+          <option value="oldest" {% if request.GET.sort == 'oldest' %}selected{% endif %}>Plus Ancien</option>
+        </select>
+      </form>
+
+      <ul class="analyse-list">
+        {% for anal in analyse %}
+        <li>
+            <a href="{% url 'analyse_detail' anal.id %}">
+              {{ anal.title }}
+            </a>
+          <p>By {{ anal.author }} — {{ anal.created_at|date:"d F Y" }}</p>
+          <div class="analytic">
+            <p>{{ anal.views }} vues</p>
+            <form action="{% url 'like_analyse' anal.id %}" method="post">
+              {% csrf_token %}
+              <button type="submit">👍 {{ anal.likes }}</button>
+            </form>
+          </div>
+        </li>
+        {% empty %}
+          <li>Pas d'analyses disponibles</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <footer>
+        <div class="legal-thing">
+            <p>© Collectif Guadeloupe Éthique et Démocratie - 2025</p>
+            <a href="/privacy.html">Politique de confidentialité</a>
+        </div>
+    </footer>
+  </body>
+</html>

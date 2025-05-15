@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>À propos de CGED</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <div class="first-div"> 
+                <img class="logo" src="{% static './img/cged_logo_no_background.png' %}" alt="site_logo">
+                    <div class="line"></div>
+                <h1>Collectif <br> Guadeloupe Éthique et Démocratie</h1>
+                <a href="{% url 'login' %}">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>Se connecter
+                </a>
+            </div>
+            <div class="second-div">
+                <img class="flag" src="{% static './img/manif.jpg' %}" alt="manif">
+            </div>
+        </header>
+
+        <nav>
+            <a href="{% url 'home' %}">Accueil</a>
+            <a href="{% url 'communique' %}">Communiqués</a>
+            <a href="{% url 'analyse' %}"> Analyses Sociétales</a>
+            <a href="{% url 'charte' %}">Charte</a>
+            <a href="{% url 'contact' %}"> Contactez-nous</a>
+        </nav>
+
+        <div class="belly-about">
+            <h1> Qui Sommes-Nous?</h1>
+                <p>
+                    Le collectif « Guadeloupe, éthique et démocratie » est un regroupement de citoyennes et de citoyens ayant des intérêts matériels, 
+                    affectifs et moraux en Guadeloupe, et qui souhaitent agir dans un cadre collectif afin de contribuer à un avenir commun pacifié, 
+                    et où les différences d’origines, de genre et d’opinions apparaissent comme une richesse plutôt que comme le terreau des divisions 
+                    mortifères et dangereuses. <br><br>
+                    Le collectif est strictement apolitique. Il se veut fondamentalement et profondément respectueux en son sein, 
+                    comme dans l’espace public, des différences d’opinons religieuses, philosophiques et politiques, dès lors que l’expression 
+                    de ces opinions n’est pas contraire aux droits humains fondamentaux.
+                </p>
+
+            <h1> Qui Sont les Co-Fondateurs?</h1>
+                <p>
+                    Tony ALBINA, Jenner BEDMINSTER, Marcel BRIDE, Elyzabeth CHOMEREAU-LAMOTTE, David DAHOMAY, Jacky DAHOMAY, Sonia DERIAU-REINE, 
+                    Michel EYNAUD, Jan-Marc FERLY, Béatrice IBENE, Bruno JOFA, Olivier LABOISSIERE, Nicole LORI-DELFOLIE, Viviane MELYON-DEFRANCE, 
+                    Rosan MONZA, Jacques PAUL, Pierre REINETTE, Christian SAAD, Carole VENUTOLO, Georges VILA
+                </p>
+        </div>
+
+        <footer>
+            <div class="legal-thing">
+                <p>© Collectif Guadeloupe Éthique et Démocratie - 2025</p>
+                <a href="/privacy.html">Politique de confidentialité</a>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<!-- The main objective is to create a publishing site for my dad-->
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello World</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Allow screen size adaptation between devices -->
+    </head>
+
+    <body>
+        <header>
+            <div class="first-div"> 
+                <img class="logo" src="{% static './img/cged_logo_no_background.png' %}" alt="site_logo">
+                    <div class="line"></div>
+                <h1>Collectif <br> Guadeloupe Éthique et Démocratie</h1>
+                <a href="{% url 'login' %}">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>Se connecter
+                </a>
+            </div>
+            <div class="second-div">
+                <img class="flag" src="{% static './img/manif.jpg' %}" alt="manif">
+            </div>
+        </header>
+
+        <nav>
+            <a href="{% url 'communique' %}">Communiqués</a>
+            <a href="{% url 'analyse' %}"> Analyses Sociétales</a>
+            <a href="{% url 'about' %}"> À propos</a>
+            <a href="{% url 'charte' %}">Charte</a>
+            <a href="{% url 'contact' %}"> Contactez-nous</a>
+        </nav>
+        
+        <div class="belly-accueil">
+            <section class="comm">
+                <h2>Nos derniers communiqués</h2>
+                <ul>
+                {% for article in recent_articles %}
+                    <li>
+                        <a href="{% url 'article_detail' article.id %}"><strong>{{ article.title }}</strong></a><br>
+                        <p>{{ article.author }} — {{ article.created_at }}</p>
+                        {% endfor %}
+                    </li>
+                </ul>   
+            </section>
+
+            <section class="anal">
+                <h2>Nos dernières analyses sociétales</h2>
+                <ul>
+                {% for analyse in recent_analyses %}
+                    <li>
+                        <a href="{% url 'analyse_detail' analyse.id %}"><strong>{{ analyse.title }}</strong></a>
+                        <br>{{ analyse.author }} — {{ analyse.created_at }}
+                        {% endfor %}
+                    </li>
+                </ul> 
+            </section>
+        </div>
+
+        <footer>
+            <div class="legal-thing">
+                <p>© Collectif Guadeloupe Éthique et Démocratie - 2025</p>
+                <a href="/privacy.html">Politique de confidentialité</a>
+            </div>
+        </footer> 
+    </body>         
+</html>

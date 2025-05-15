@@ -1,0 +1,27 @@
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Delete</title>
+    {% bootstrap_css %}
+</head>
+<body>
+
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
+    <h5 class="card-title text-center mb-3">Confirm Deletion</h5>
+    <p class="card-text text-center">
+      Are you sure you want to delete <strong>"{{ analyse.title }}"</strong>?
+    </p>
+    <form method="post" class="d-flex justify-content-between">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Yes, delete</button>
+      <a href="{% url 'dashboard' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>
+
+{% bootstrap_javascript %}
+</body>
+</html>

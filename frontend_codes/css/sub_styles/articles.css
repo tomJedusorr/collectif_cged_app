@@ -1,0 +1,22 @@
+/* Article styles */
+article {
+    margin-bottom: 40px;
+  }
+  
+  article h2 {
+    font-size: 1.8em;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  article p {
+    margin-bottom: 15px;
+  }
+
+  .com h2 {
+    margin-bottom: 0.2em;
+  }
+
+  .com p {
+    margin: 0.3em 0;
+  }

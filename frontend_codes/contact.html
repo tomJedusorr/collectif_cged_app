@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <div class="first-div"> 
+                <img class="logo" src="{% static './img/cged_logo_no_background.png' %}" alt="site_logo">
+                    <div class="line"></div>
+                <h1>Collectif <br> Guadeloupe Éthique et Démocratie</h1>
+                <a href="{% url 'login' %}">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>Se connecter
+                </a>
+            </div>
+            <div class="second-div">
+                <img class="flag" src="{% static './img/manif.jpg' %}" alt="manif">
+            </div>
+        </header>
+
+        <nav>
+            <a href="{% url 'home' %}">Accueil</a>
+            <a href="{% url 'communique' %}">Communiqués</a>
+            <a href="{% url 'analyse' %}"> Analyses Sociétales</a>
+            <a href="{% url 'about' %}"> À propos</a>
+            <a href="{% url 'charte' %}">Charte</a>
+        </nav>
+
+        <belly class="belly-contact">
+            <p>
+                Une recommendation, <br> 
+                une opinion sur comment nous pourrions améliorer notre site, <br> 
+                un commentaire sur l'un de nos communiqués <br>
+                ou tout autre sujet? <br> Contactez-nous par mail!
+            </p>     
+
+            <form action="https://formsubmit.co/raphael.dahomay@kedgebs.com" method="POST"> <!-- Changez avec la bonne adresse à la fin-->
+                <label>Nom:</label><br>
+                <input type="text" name="name" placeholder="votre nom"><br><br>
+
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="votre email"><br><br>
+
+                <label>Message:</label><br>
+                <textarea name="message" placeholder="entrez votre message"></textarea><br><br>
+
+                <button type="submit">Send</button>
+            </form>
+        </belly>
+
+        <footer>
+            <div class="legal-thing">
+                <p>© Collectif Guadeloupe Éthique et Démocratie - 2025</p>
+                <a href="/privacy.html">Politique de confidentialité</a>
+            </div>
+        </footer>
+    </body>
+</html>

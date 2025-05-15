@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Article</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+  <h1>Publier un nouveau communiqué</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.media }}
+  
+    <label for="id_title">Titre:</label>
+    {{ form.title }} <br><br>
+
+    <label for="id_author">Auteur (optionnel):</label>
+    {{ form.author }} <br><br>
+  
+    <label for="id_content">Contenu:</label>
+    {{ form.content }} <br><br>
+  
+    <label for="id_created_at">Date (optionnel):</label>
+    {{ form.created_at }}
+    
+    <button type="submit">Publier</button>
+  </form>
+
+</body>
+</html>
