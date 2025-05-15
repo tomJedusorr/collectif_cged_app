@@ -27,7 +27,7 @@ ALLOWED_HOSTS = ['collectif-ged.onrender.com']
 
 # Database configuration using the DATABASE_URL environment variable
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'), conn_max_age=600, ssl_require=True)
 }
 
 # Application definition
