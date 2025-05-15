@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['collectif_ged.onrender.com']
+ALLOWED_HOSTS = ['collectif-ged.onrender.com']
 
 # Database configuration using the DATABASE_URL environment variable
 DATABASES = {
