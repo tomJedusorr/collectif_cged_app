@@ -42,16 +42,16 @@
                 ou tout autre sujet? <br> Contactez-nous par mail!
             </p>     
 
-            <form action="https://formsubmit.co/raphael.dahomay@kedgebs.com" method="POST"> <!-- Changez avec la bonne adresse à la fin-->
+            <form action="mailto:collectifGED@gmail.com" method="POST"> <!-- Changez avec la bonne adresse à la fin-->
                 {% csrf_token %}
-                <label>Nom:</label><br>
-                <input type="text" name="name" placeholder="votre nom"><br><br>
+                <label for="name">Nom:</label><br>
+                <input type="text" id="name" name="name" placeholder="votre nom"><br><br>
 
-                <label>Email:</label><br>
-                <input type="email" name="email" placeholder="votre email"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="votre email"><br><br>
 
-                <label>Message:</label><br>
-                <textarea name="message" placeholder="entrez votre message"></textarea><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="40" placeholder="entrez votre message"></textarea><br><br>
 
                 <button type="submit">Send</button>
             </form>
