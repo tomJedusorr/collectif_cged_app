@@ -1,7 +1,7 @@
 from django import forms
 from .models import Article, ResearchPaper
 import datetime
-from models import ContactMessage
+from .models import ContactMessage
 
 
 class ArticleForm(forms.ModelForm):
