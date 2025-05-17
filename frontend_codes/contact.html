@@ -35,29 +35,41 @@
         </nav>
 
         <belly class="belly-contact">
-            <p>
-                Une recommendation, <br> 
-                une opinion sur comment nous pourrions améliorer notre site, <br> 
-                un commentaire sur l'un de nos communiqués <br>
-                ou tout autre sujet? <br> Envoyez-nous un message! <br>
-                Ou contactez-nous par mail: <br>
-                <a href="mailto:collectifGED@gmail.com">Icon to add</a></p>
-            </p>     
+            <div class="para">
+                <p>
+                    Une recommendation, <br> 
+                    une opinion sur comment nous pourrions améliorer notre site, <br> 
+                    un commentaire sur l'un de nos communiqués <br>
+                    ou tout autre sujet? <br> Envoyez-nous un message! <br>
+                    Ou contactez-nous par mail: 
+                    <a href="mailto:collectifGED@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </p>  
+            </div>   
 
-            <form method="post">
-                {% csrf_token %}
-            
-                <label for="{{ form.name.id_for_label }}">Votre Nom</label>
-                {{ form.name }}
-            
-                <label for="{{ form.email.id_for_label }}">Votre Email</label>
-                {{ form.email }}
-            
-                <label for="{{ form.message.id_for_label }}">Écrivez votre message</label>
-                {{ form.message }}
-            
-                <button type="submit">Soumettre</button>
-            </form>
+            <div class="inte"></div>
+                <form method="post">
+                    {% csrf_token %}
+                
+                    <label for="{{ form.name.id_for_label }}">Votre Nom:</label> <br>
+                    {{ form.name }} <br>
+
+                    <label for="{{ form.email.id_for_label }}">Votre Email:</label> <br>
+                    {{ form.email }} <br>
+                
+                    <label for="{{ form.message.id_for_label }}">Écrivez votre message:</label><br>
+                    {{ form.message }} <br>
+                
+                    <button type="submit">Soumettre</button>
+                </form>
+                {% if message_sent %}
+                <div id="message-overlay">
+                    <div id="message-box">
+                        <p>✅ Message envoyé avec succès !</p>
+                        <button onclick="document.getElementById('message-overlay').style.display='none';">OK</button>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
         </belly>
 
         <footer>

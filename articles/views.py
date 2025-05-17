@@ -165,12 +165,18 @@ def like_analyse(request, analyse_id):
     return redirect('analyse')
 
 def contact_view(request):
+    message_sent = False
+
     if request.method == 'POST':
         form = ContactMessageForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'contact_success.html')
+            message_sent = True
+            form = ContactMessageForm()  # clear form after saving
     else:
         form = ContactMessageForm()
 
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'contact.html', {
+        'form': form,
+        'message_sent': message_sent
+    })

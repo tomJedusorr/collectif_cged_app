@@ -58,6 +58,20 @@
                 {% endfor %}
             </ul>   
         </div>   
+
+        <div class="fourth-dash">
+            <h2>Vos messages</h2> <br>
+            <ul>
+                {% for message in messages %}
+                <li>
+                    <strong>{{ message.name }}</strong> -- {{ message.email }} <br>
+                    {{ message.created_at }} <br>
+                    {{ message.message }} <br><br>
+                </li>
+                {% empty %}
+                <li>Pas de messages disponibles.</li>
+                {% endfor %}
+        </div>
     </body>
 
 </html>

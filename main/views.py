@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from articles.models import Article, ResearchPaper
+from articles.models import Article, ResearchPaper, ContactMessage
 
 # Create your views here.
 
@@ -23,7 +23,9 @@ def charte_view(request):
 def dashboard(request):
     user_articles = Article.objects.all()
     user_papers = ResearchPaper.objects.all()
+    user_messages = ContactMessage.objects.all()
     return render(request, 'dashboard.html', {
         'articles': user_articles,
         'papers': user_papers,
+        'messages': user_messages
     })
