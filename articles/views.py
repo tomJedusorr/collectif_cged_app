@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ArticleForm, ResearchPaperForm
 from articles.models import Article, ResearchPaper, ArticleLike, AnalyseLike
 from django.http import HttpResponseForbidden
+from .forms import ContactMessageForm
 
 @login_required
 def create_article(request):
@@ -162,3 +163,14 @@ def like_analyse(request, analyse_id):
     analyse.likes += 1
     analyse.save(update_fields=['likes'])
     return redirect('analyse')
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactMessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'contact_success.html')
+    else:
+        form = ContactMessageForm()
+
+    return render(request, 'contact.html', {'form': form})

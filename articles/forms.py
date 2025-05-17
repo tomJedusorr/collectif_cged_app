@@ -1,6 +1,7 @@
 from django import forms
 from .models import Article, ResearchPaper
 import datetime
+from models import ContactMessage
 
 
 class ArticleForm(forms.ModelForm):
@@ -40,3 +41,8 @@ class ResearchPaperForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['created_at'].input_formats = ['%Y-%m-%d']
         self.fields['created_at'].initial = datetime.date.today().strftime('%Y-%m-%d')
+
+class ContactMessageForm(forms.ModelForm):
+    class Meta:
+        model = ContactMessage
+        fields = ['name', 'email', 'message']

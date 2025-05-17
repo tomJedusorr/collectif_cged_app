@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from articles.models import Article, ResearchPaper
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -18,9 +21,6 @@ def about_view(request):
 
 def charte_view(request):
     return render(request, 'charte.html')
-
-def contact_view(request):
-    return render(request, 'contact.html')
 
 @login_required
 def dashboard(request):
