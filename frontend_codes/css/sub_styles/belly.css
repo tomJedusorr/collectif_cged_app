@@ -211,8 +211,7 @@
     padding: 40px;
     flex: 1;
     text-align: right;
-    border-right: 1px solid;
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 60px;
 }
 
@@ -232,17 +231,19 @@
     width: 400px;
 }
 
-textarea {
-    width: 100%;
-    max-width: 400px;
-    height: 100px;
-    resize: vertical; /* Prevent manual resize */
-  }
-
 .belly-contact input:focus,
 .belly-contact textarea:focus {
   border-color: #0077cc;
   outline: none;
+}
+
+.para {
+    width: 50%;
+    border-right: 1px solid #ccc;
+}
+
+.inte {
+    width: 50%;
 }
 
 .belly-contact button {
