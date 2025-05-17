@@ -33,7 +33,7 @@ urlpatterns = [
     path('about/', views.about_view, name='about'),
     path('analyse/', vi.public_analyse, name='analyse'),
     path('charte/', views.charte_view, name='charte'),
-    path('contact/', views.feedback_create, name='feedback'),
+    path('contact/', vi.contact_view, name='contact'),
     path('create/', include('articles.urls')),
     path('admin/', admin.site.urls),
     path('accounts/login/', LoginView.as_view(template_name='login.html'), name="login"),
