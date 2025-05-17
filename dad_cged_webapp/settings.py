@@ -138,12 +138,3 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 # Heroku settings.
 import django_heroku
 django_heroku.settings(locals())
-
-# Backends email settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
-EMAIL_HOST_USER = 'raphael.dahomay@gmail.com'
