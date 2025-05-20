@@ -24,3 +24,17 @@
     margin: 30px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .anal-coeur {
+        margin: 0;
+        padding: 50px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px) {
+    .anal-coeur h1 {
+        font-size: 1.5rem;
+    }
+}

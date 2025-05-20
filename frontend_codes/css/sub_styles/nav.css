@@ -2,16 +2,17 @@ nav {
     display: flex;
     background-color: #f8f9fa;
     padding: 15px 30px;
-    margin-bottom: 10px;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
+    flex-wrap: wrap;
     font-variation-settings:
       "wdth" 100;
     gap: 30px;
     letter-spacing: 1px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(115, 112, 112, 0.2);
+    position: relative;
   }
   
   
@@ -24,4 +25,11 @@ nav {
   
   nav a:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .nav a {
+      flex-direction: column;
+      text-align: center;
+    }
   }

@@ -1,5 +1,6 @@
 .belly-accueil {
-    margin: 20px
+    background-color: rgb(253, 250, 250);
+    padding: 20px;
 }
 
 .belly-accueil h2 {
@@ -7,8 +8,10 @@
 }
 
 .belly-com {
-    margin: 20px;
     line-height: 30px;
+    padding: 50px;
+    padding-top: 50px;
+    background-color: rgb(253, 250, 250)
 }
 
 .belly-com form {
@@ -20,7 +23,9 @@
 }
 
 .belly-anal {
-    margin: 20px;
+    padding: 50px;
+    padding-top: 50px;
+    background-color: rgb(253, 250, 250);
     line-height: 30px;
 }
 
@@ -132,12 +137,19 @@
     background-color: rgb(207, 204, 204);
 }
 
+.comm {
+    padding-top: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
 .comm ul {
     margin: 20px;
     line-height: 30px;
     border-top: 1px solid;
     border-left: 1px solid;
     border-right: 1px solid;
+    background-color: rgb(255, 245, 245)
 }
 
 .comm li {
@@ -149,6 +161,7 @@
 
 .anal {
     padding-top: 20px;
+    flex-wrap: wrap;
 }
 
 .anal ul {
@@ -157,6 +170,7 @@
     border-top: 1px solid;
     border-left: 1px solid;
     border-right: 1px solid;
+    background-color: rgb(255, 245, 245)
 }
 
 .anal li {
@@ -185,9 +199,14 @@
 }
 
 .belly-charte {
-    margin: 40px;
-    border: 1px solid;
+    padding: 40px;
     text-align: center;
+    background-color: rgb(253, 250, 250)
+}
+
+.b-charte {
+    border: 1px solid;
+    background-color: rgb(255, 245, 245);
     padding-bottom: 40px;
 }
 
@@ -197,7 +216,9 @@
 
 .belly-contact {
     display: flex;
-    margin: 60px;
+    padding: 60px;
+    background-color: rgb(253, 250, 250);
+    flex-wrap: wrap;
 }
 
 .belly-contact form {
@@ -301,11 +322,13 @@
 }
 
 .belly-about {
-    margin-bottom: 20px;
+    background-color: rgb(253, 250, 250);
+    padding: 50px;
 }
 
 .belly-about h1 {
-    margin: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .belly-about p {
@@ -313,6 +336,8 @@
     margin-right: 50px;
     font-size: larger;
     line-height: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .comm {
@@ -362,4 +387,96 @@
 
 #message-box button:hover {
     background-color: #1b5e20;
+}
+
+@media (max-width: 768px) {
+    .comm ul, .anal ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .comm a, .anal a, .belly-com a, .belly-anal a {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-charte  {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-charte h1  {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-charte h2  {
+        font-size: 1rem;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-charte h3  {
+        font-size: 0.9rem;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-charte h4  {
+        font-size: 0.9rem;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-charte p  {
+        font-size: 0.7rem;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .para {
+        width: 100%;
+        border-right: unset;
+        padding-right: 0px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .para p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .belly-contact input,
+    .belly-contact textarea {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .belly-contact form {
+        padding-right: 0;
+    }
 }
