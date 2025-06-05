@@ -1,6 +1,7 @@
 .belly-accueil {
     background-color: rgb(253, 250, 250);
     padding: 20px;
+    padding-top: 20px;
 }
 
 .belly-accueil h2 {
@@ -92,11 +93,15 @@
 .belly-com ul {
     border-top: 1px solid;
     margin-top: 10px;
+    background-color: rgb(255, 245, 245);
+    box-shadow: 0 0 20px rgba(115, 112, 112, 0.3);
 }
 
 .belly-anal ul {
     border-top: 1px solid;
     margin-top: 10px;
+    background-color: rgb(255, 245, 245);
+    box-shadow: 0 0 20px rgba(115, 112, 112, 0.3);
 }
 
 .belly-com button {

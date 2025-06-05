@@ -23,17 +23,18 @@
                 </a>
             </div>
             <div class="second-div">
-                <img class="flag" src="{% static './img/flag.jpg' %}" alt="manif">
+                <div class="img-container">
+                    <img class="flag" src="{% static './img/flag.jpg' %}" alt="manif">
+                </div>
+                <nav>
+                    <a href="{% url 'home' %}">Accueil</a>
+                    <a href="{% url 'communique' %}">Communiqués</a>
+                    <a href="{% url 'analyse' %}"> Analyses Sociétales</a>
+                    <a href="{% url 'charte' %}">Charte</a>
+                    <a href="{% url 'contact' %}"> Contactez-nous</a>
+                </nav>
             </div>
         </header>
-
-        <nav>
-            <a href="{% url 'home' %}">Accueil</a>
-            <a href="{% url 'communique' %}">Communiqués</a>
-            <a href="{% url 'analyse' %}"> Analyses Sociétales</a>
-            <a href="{% url 'charte' %}">Charte</a>
-            <a href="{% url 'contact' %}"> Contactez-nous</a>
-        </nav>
 
         <div class="belly-about">
             <h1> Qui Sommes-Nous?</h1>

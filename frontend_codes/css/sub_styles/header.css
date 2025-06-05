@@ -1,10 +1,19 @@
 /* Header styles */
 
+header {
+  position: relative;
+  margin-bottom: 80px;
+}
+
 .first-div {
+  width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: #F2F0EE;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255);
+    border: 0.5px solid;
+    box-shadow: 0 0 20px rgba(115, 112, 112, 0.5);
+    position: absolute;
+    z-index: 3;
   }
 
 .first-div h1 {
@@ -51,15 +60,30 @@
 
 .second-div {
     width: 100%;
-    height: 100px;
-    overflow: hidden;
+    height: 100%;
+    position: relative;
+    top: 90px;
 }
 
 .flag {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    filter: blur(1px) saturate(150%);
+    width: 92%;
+    height: 98%;
+    object-fit: cover;
+    filter: saturate(120%);
+    border-radius: 2px;
+    box-shadow: 0 0 40px #F2F0EE(0, 0, 0, 0.3);
+    object-position: center top;
+    border: 0.5px solid;
+    box-shadow: 0 0 20px rgba(115, 112, 112, 0.5);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(243, 242, 242);
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(115, 112, 112, 0.5);
 }
 
 @media (max-width: 768px) {

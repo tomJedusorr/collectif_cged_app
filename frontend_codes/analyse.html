@@ -16,24 +16,25 @@
     <header>
       <div class="first-div"> 
         <img class="logo" src="{% static './img/cged_logo_no_background.png' %}" alt="site_logo">
-          <div class="line"></div>
+            <div class="line"></div>
         <h1>Collectif <br> Guadeloupe Éthique et Démocratie</h1>
         <a href="{% url 'login' %}">
-          <i class="fa-solid fa-user" style="color: #000000;"></i>Se connecter
+            <i class="fa-solid fa-user" style="color: #000000;"></i>Se connecter
         </a>
       </div>
       <div class="second-div">
-        <img class="flag" src="{% static './img/flag.jpg' %}" alt="manif">
+        <div class="img-container">
+            <img class="flag" src="{% static './img/flag.jpg' %}" alt="manif">
+        </div>
+        <nav>
+          <a href="{% url 'home' %}">Accueil</a>
+          <a href="{% url 'communique' %}">Communiqués</a>
+          <a href="{% url 'about' %}"> À propos</a>
+          <a href="{% url 'charte' %}">Charte</a>
+          <a href="{% url 'contact' %}"> Contactez-nous</a>
+        </nav>
       </div>
     </header>
-
-    <nav>
-      <a href="{% url 'home' %}">Accueil</a>
-      <a href="{% url 'communique' %}">Communiqués</a>
-      <a href="{% url 'about' %}"> À propos</a>
-      <a href="{% url 'charte' %}">Charte</a>
-      <a href="{% url 'contact' %}"> Contactez-nous</a>
-    </nav>
 
     <div class="belly-anal">
       <h2>Retrouvez ici toutes nos analyses sociétales</h2>
