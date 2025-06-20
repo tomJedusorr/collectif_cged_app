@@ -6,17 +6,22 @@
     margin-bottom: 20px;
     background-color: rgb(255, 245, 245);
     box-shadow: 0 0 20px rgba(115, 112, 112, 0.3);
-    padding: 40px;
+    padding: 80px;
+}
+
+.com-coeur h1 {
+    text-align: left;
+    word-spacing: 0.3em;
 }
 
 .subtitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .com-coeur a {
     text-decoration: none;
-    color: black;
+    color: rgb(6, 22, 100);
 }
 
 .com-coeur button {
@@ -29,7 +34,8 @@
 }
 
 .com-coeur p {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 20px;
 }
 
 @media (max-width: 768px) {

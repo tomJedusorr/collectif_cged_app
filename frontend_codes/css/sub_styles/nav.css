@@ -1,24 +1,24 @@
 nav {
-    width: 100%;
-    display: flex;
-    padding: 15px 30px;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    flex-wrap: wrap;
-    font-variation-settings:
-      "wdth" 100;
-    gap: 50px;
-    letter-spacing: 1px;
-    box-shadow: 0 0 20px rgba(115, 112, 112, 0.3);
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.97);
-    z-index: 3;
-    top: 197.5px;
-    justify-content: center;
-    border: 0.5px solid;
-  }
+  position: sticky; /* Or fixed, depending on your goal */
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 0 20px rgba(115, 112, 112, 0.5);
+  z-index: 3; /* high enough to stay on top */
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  gap: 50px;
+  letter-spacing: 1px;
+  border-top: 0.3px solid;
+  border-bottom: 0.3px solid;
+}
   
   
   nav a {
@@ -37,4 +37,12 @@ nav {
       flex-direction: column;
       text-align: center;
     }
+
+    .nav {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      z-index: 1;
+      position: relative;
+    }
+
   }
